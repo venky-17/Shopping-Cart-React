@@ -68,7 +68,7 @@ const Cart =({cartItem, removeItem , buyNow})=> {
       </CardFooter>
     </Card>
   ) : (
-    <h2 className="text-warning">Your Cart is empty</h2>
+    <h2 className="text-warning">Your Cart is Empty!!</h2>
   )
 }
 
