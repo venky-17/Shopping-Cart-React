@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { Container, Col, Row, CardImg, Button } from "reactstrap";
-import CardItem from "./Cardtem"; // Assuming you have a file named CardItem.js
+import CardItem from "./Cardtem"; 
 
 const apiKey = "Your API KEY";
 const realURL = "https://fakestoreapi.com/products/category/electronics";
@@ -18,7 +18,7 @@ const BuyPage = ({ addToCart }) => {
         const image = product.image;
         const price = product.price;
         const rating = product.rating.rate;
-        return { title, productID, image, rating, price }; // Removed unnecessary 'product' property
+        return { title, productID, image, rating, price }; 
       });
       setProduct(productsArray);
     } catch (error) {
@@ -33,7 +33,7 @@ const BuyPage = ({ addToCart }) => {
   return (
     <Container fluid>
       <h1 className="text-center text-light">Best Laptops</h1>
-      <Row xs="1" md="2" lg="3"> {/* Adjust the number of columns for different screen sizes */}
+      <Row xs="1" md="2" lg="3"> 
         {product.map(productItem => (
           <Col key={productItem.productID} className="mb-4">
             <CardItem productItem={productItem} addToCart={addToCart} />
